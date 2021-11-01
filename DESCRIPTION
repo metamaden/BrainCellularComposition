@@ -7,4 +7,3 @@ Maintainer: Urwah Nawaz <urwah.nawaz@adelaide.edu.au>
 Description: Contains purified gene expression information from brain cell-types from human and mouse brain fromvarious snRNA-seq and scRNA-seq studies. 
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
