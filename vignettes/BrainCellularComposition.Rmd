@@ -60,6 +60,15 @@ The `sigsBrain` data object contains the following signatures:
 
 # Usage 
 
-```{r setup, eval=FALSE}
+
+
+```{r setup}
 library(BrainCellularComposition)
+```
+
+
+For example to retrieve neurons from the F5 dataset 
+
+```{r, eval = TRUE}
+F5_neurons <- loadSignature("F5", "Neurons")
 ```
