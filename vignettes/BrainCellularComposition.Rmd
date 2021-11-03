@@ -64,6 +64,7 @@ The `sigsBrain` data object contains the following signatures:
 
 ```{r setup}
 library(BrainCellularComposition)
+library(ExperimentHub)
 ```
 
 
