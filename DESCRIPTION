@@ -5,6 +5,7 @@ Version: 0.1.0
 Author: Urwah Nawaz, Gavin Sutton
 Maintainer: Urwah Nawaz <urwah.nawaz@adelaide.edu.au>
 Description: Contains purified gene expression information from brain cell-types from human and mouse brain fromvarious snRNA-seq and scRNA-seq studies. 
+biocViews: ExperimentHub, Homo_sapiens_Data, RNASeqData, ExpressionData 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Suggests: 
