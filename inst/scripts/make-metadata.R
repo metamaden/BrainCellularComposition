@@ -24,7 +24,7 @@ meta = data.frame(
     Maintainer = c("Urwah Nawaz <urwah.nawaz@adelaide.edu.au>"),
     RDataClass = c("data.frame"),
     DispatchClass= "Rda",
-    RDataPath = c("BrainCellularComposition/fantom_cage.rda",
+    RDataPath = c("BrainCellularComposition/fantom5_cage.rda",
                   "BrainCellularComposition/IP_immunopurified_human_brain.rda",
                   "BrainCellularComposition/MM_immunopurified_mouse_brain.rda",
                   "BrainCellularComposition/CA_CellAtlas_snRNAseq.rda",
