@@ -1,13 +1,13 @@
 ---
-title: "BrainCellularComposition User Guide"
-shorttitle: "BrainCellularComposition guide"
-output: rmarkdown::html_vignette
-fig_width: 8
-fig_height: 6
-vignette: >
-  %\VignetteIndexEntry{BrainCellularComposition}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  title: "BrainCellularComposition Data User Guide"
+  author: "Urwah Nawaz"
+  package: BrainCellularComposition
+  output: 
+    BiocStyle::html_document
+  vignette: >
+    %\VignetteIndexEntry{Vignette Title}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}  
 ---
 
 
@@ -33,9 +33,9 @@ Development version can be installed from GitHub
 
 # Introduction
 
-The `BrainCellularComposition` package provides gene expression data for purified brain cell-types as collated and benchmarked in Sutton et al. (2021). 
+The `BrainCellularComposition` package is an ExperimentHub package that provides gene expression data for purified brain cell-types as collated and benchmarked in Sutton et al. (2021). 
 
-The `sigsBrain` data object contains the following signatures: 
+The `BrainCellularComposition` package contains the following brain signatures: 
 
 * F5: Cultured cells obtained from the FANTOM5 consortium containing only neuron and astrocyte cell-type composition for each gene 
 
@@ -61,15 +61,34 @@ The `sigsBrain` data object contains the following signatures:
 # Usage 
 
 
-
-```{r setup}
-library(BrainCellularComposition)
+```{r load-packages, message=FALSE}
+#library(BrainCellularComposition)
 library(ExperimentHub)
+library(SummarizedExperiment)
 ```
 
 
-For example to retrieve neurons from the F5 dataset 
 
-```{r, eval = TRUE}
-F5_neurons <- loadSignature("F5", "Neurons")
+```{r get data}
+eh = ExperimentHub()
+```
+
+```{r}
+query(eh , 'BrainCellularComposition')
+```
+
+The data can then be downloaded using the unique identifier. For example, we are interested in the FANTOM5 cage dataset
+
+```{r}
+fantom5 <- as.data.frame(eh[["EH7280"]]) 
+```
+
+```{r}
+head(fantom5)
+```
+
+
+# Session information
+```{r}
+sessionInfo()
 ```
